@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">""
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMPERIAL GUARD INSURANCE AGENCY</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .form-container {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 450px;
+      padding: 20px 40px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 150px;
+      height: auto;
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+      color: #1a365d;
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #1a365d;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: "Poppins", sans-serif;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fafbfc;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #3182ce;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+      background-color: #ffffff;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: #a0aec0;
+      font-weight: 400;
+    }
+    select {
+      background-color: #ffffff;
+      color: #4a5568;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+      background-position: right 12px center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+      padding-right: 40px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    button {
+      width: 100%;
+      background-color: #1a365d;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-family: "Poppins", sans-serif;
+    }
+    button:hover {
+      background-color: #2c5282;
+      transform: translateY(-1px);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    .footer-text {
+      text-align: center;
+      font-size: 12px;
+      color: #a0aec0;
+      margin-top: 20px;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+    }
+    @media (max-width: 480px) {
+      .form-container {
+        padding: 15px 20px 30px;
+        margin: 10px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .logo {
+        max-width: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <!-- Add your logo here -->
+    <img src="logo.png.JPG" alt="Imperial Guard Insurance Agency Logo" class="logo" />
+
+    <h2>IMPERIAL GUARD INSURANCE AGENCY</h2>
+    <p class="subtitle">Please provide your details for a personalized insurance consultation.</p>
+
+    <form
+      action="https://formspree.io/f/mnngwrlq"
+      method="POST"
+      onsubmit="return handleSubmit(event)"
+    >
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@email.com" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="07XXXXXXXX" required />
+
+      <label for="insurance_type">Insurance Type</label>
+      <select id="insurance_type" name="insurance_type" required>
+        <option value="">-- Select Type --</option>
+        <option value="SME">SME Insurance</option>
+        <option value="Health">Health Insurance</option>
+        <option value="Personal Accident">Personal Accident Insurance</option>
+        <option value="Motor">Motor Insurance</option>
+        <option value="Home">Home Insurance</option>
+        <option value="Travel">Travel Insurance</option>
+        <option value="Life">Life Assurance</option>
+        <option value="LE">Funeral/Last Expense Insurance</option>
+        <option value="Investments">Investments</option>
+      </select>
+
+      <label for="message">Additional Details</label>
+      <textarea id="message" name="message" rows="3" placeholder="Enter any specific details or requirements..."></textarea>
+
+      <button type="submit">Submit Inquiry</button>
+    </form>
+
+    <div class="footer-text">&copy; 2025 Imperial Guard Insurance Agency. All rights reserved.</div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault(); 
+      const form = event.target;
+
+      fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      })
+        .then(response => {
+          if (response.ok) {
+            window.location.href = "thank-you.html";
+          } else {
+            return response.json().then(data => {
+              if (Object.hasOwn(data, "errors")) {
+                alert("Submission failed: " + data["errors"].map(e => e.message).join(", "));
+              } else {
+                alert("Oops! There was a problem submitting your form.");
+              }
+            });
+          }
+        })
+        .catch(() => {
+          alert("Oops! There was a problem submitting your form.");
+        });
+
+      return false;
+    }
+  </script>
+</body>
+</html>
